@@ -14,7 +14,11 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={
     r"/generate-audio-guide": {
-        "origins": ["http://127.0.0.1:5500", "http://localhost:5500"]
+        "origins": [
+            "http://127.0.0.1:5500",
+            "http://localhost:5500",
+            "https://travelguide-frontend-xi.vercel.app"
+        ]
     }
 })
 logging.basicConfig(level=logging.INFO)
